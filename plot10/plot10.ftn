@@ -11,6 +11,13 @@ C*                P. O. BOX 500                                        *00000100
 C*                BEAVERTON, OREGON 97005                              *00000110
 C*                                                                     *00000120
 C***********************************************************************00000130
+C The code is slightly modified to give less warning messages
+C when using the gfortran compiler. Modified 2020-08-30 by Hans-Ake Lund.
+C When using INTEGER ARRAY parameters to subroutines
+C ARGNAME[1] are changed to ARGNAME[*] to avoid out of bound warnings.
+C (It is also more easy to use the gdb debugger to print elements of
+C the array.)
+C Line 1703 is also commented out, explanation on previous line.
 C                                                                       00000140
 C----------SUBROUTINE--ANMODE------------------------TEKTRONIX, INC.----00000150
 C                                                                       00000160
