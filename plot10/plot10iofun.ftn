@@ -1,0 +1,20 @@
+C Test i/o call conventions
+      SUBROUTINE ADEOUT(NCHAR, KADE)
+      DIMENSION KADE(*)
+
+      IDBGIO=0
+      IF(IDBGIO.EQ.1)WRITE(*,*) 'ADEOUT: ', NCHAR
+      DO 10 I=1,NCHAR
+      IF(IDBGIO.EQ.1)WRITE(*,*) KADE(I)
+      IF(IDBGIO.EQ.0)CALL PLOTCHOUT(KADE(I))
+10    CONTINUE
+      RETURN
+      END
+
+      SUBROUTINE ADEIN(NCHAR, KADE)
+      DIMENSION KADE(1)
+
+      IDBGIO=1
+      IF(IDBGIO.EQ.1)WRITE(*,*) 'ADEIN'
+      RETURN
+      END
