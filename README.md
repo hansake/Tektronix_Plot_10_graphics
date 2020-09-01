@@ -16,4 +16,4 @@ Then the graphic program is started:
 There is also a copy of Plot 10 code in the folder plot10_z80 that I ported a long time ago
 to the Z80 CPU on the Zilog RIO operating system. This code is not tested as I have not had
 access to a Z80 RIO system for a looong time now. (If someone knows where to find the RIO
-code, please send me this info.)
+code, please send me info.)
