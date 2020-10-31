@@ -1,0 +1,23 @@
+C   Set buffertype
+      CALL SETBUF(4)
+C   Plot triangles
+      CALL INITT(480)
+      CALL TRIANG(200., 200.)
+C   Double scale size
+      CALL RSCALE(2.)
+C   Rotated 90 degrees and redraw
+      CALL RROTAT(90.)
+      CALL TRIANG(700., 400.)
+      CALL FINITT(10, 10)
+      END PROGRAM
+
+      SUBROUTINE TRIANG(X, Y)
+      CALL MOVEA(X, Y)
+      CALL MOVER(-100., -100.)
+      CALL DRAWR(200., 0.)
+      CALL DRAWR(-100., 200.)
+      CALL DRAWR(-100., -200.)
+      CALL POINTR(100., 100.)
+      RETURN
+      END
+
