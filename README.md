@@ -10,8 +10,8 @@ In this terminal window the command: "stty raw" is executed (not sure if this is
 maybe some output characters may be changed otherwise).
 
 Then the graphic program is started:
-- "./plottest" this shows two triangles
-- "./triangles" shows one partial triangle and some garbage, further debugging needed
+- "./plottest" shows two triangles
+- "./triangles" shows two triangles in different sizes
 
 There is also a copy of Plot 10 code in the folder plot10_z80 that I ported a long time ago
 to the Z80 CPU on the Zilog RIO operating system. This code is not tested as I have not had
