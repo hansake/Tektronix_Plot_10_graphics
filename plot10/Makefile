@@ -3,6 +3,8 @@
 
 DBGFLG = -g
 
+all: plottest triangles
+
 plottest: plottest.o plot10.o plot10iofun.o chariofun.o
 	gfortran $(DBGFLG) -o plottest plottest.o plot10.o plot10iofun.o chariofun.o
 
@@ -23,3 +25,7 @@ plot10iofun.o: plot10iofun.ftn
 
 chariofun.o: chariofun.c
 	gcc $(DBGFLG) -c chariofun.c
+
+test: plottest triangles
+	xterm -t -tn tek4014 -hold -e ./plottest &
+	xterm -t -tn tek4014 -hold -e ./triangles &
